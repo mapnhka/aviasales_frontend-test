@@ -1,25 +1,26 @@
 import React from 'react';
+import { Route, Switch, Router } from 'react-router-dom';
+import history from './appHistory';
+import Loadable from 'react-loadable';
+import './App.scss';
 import logo from './logo.svg';
-import './App.css';
+import DefaultLayout from "./containers/DefaultLayout"
+
+const loading = () => <div className="">Loading...</div>;
+
+// Containers
+/*const DefaultLayout = Loadable({
+  loader: () => import('./containers/DefaultLayout'),
+  loading
+});*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router history={history}>
+          <Switch>
+              <Route path="/" name="Home" component={DefaultLayout}/>
+          </Switch>
+      </Router>
   );
 }
 
