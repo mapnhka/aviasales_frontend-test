@@ -3,7 +3,6 @@ import { Route, Switch, Router } from 'react-router-dom';
 import history from './appHistory';
 import Loadable from 'react-loadable';
 import './App.scss';
-import logo from './logo.svg';
 import DefaultLayout from "./containers/DefaultLayout"
 
 const loading = () => <div className="">Loading...</div>;

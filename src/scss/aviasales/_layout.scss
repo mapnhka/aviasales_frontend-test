@@ -1,3 +1,36 @@
 body {
   background-color: $bodyBg;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  max-width: 774px;
+
+  & > .sidebar, & > .main {
+    padding: $spacer;
+  }
+
+  & > .sidebar {
+    flex-basis: 232px;
+  }
+
+  & > .main {
+    flex-basis: 502px;
+  }
+}
+
+header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .app__logo {
+    position: relative;
+    top: 15px;
+  }
 }

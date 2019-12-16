@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-top: $spacer * 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

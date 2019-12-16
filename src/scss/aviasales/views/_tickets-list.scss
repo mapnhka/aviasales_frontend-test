@@ -1,0 +1,74 @@
+.tickets-list {
+  &__item {
+    margin-top: $spacer*2;
+
+    &--row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin-top: $spacer;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      & > div {
+        display: flex;
+
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-grow: 1;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: $primary500;
+      flex-basis: 70%;
+    }
+
+    &-company {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 30%;
+    }
+  }
+
+  &__header {
+    margin-bottom: $spacer *2;
+    align-items: center;
+  }
+
+  &__variant {
+    &-info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 35%;
+
+      &:last-child {
+        flex-basis: 30%;
+      }
+    }
+  }
+
+  &__data {
+    &-caption {
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      color: $content200;
+    }
+
+    &-value {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: $content;
+    }
+  }
+}

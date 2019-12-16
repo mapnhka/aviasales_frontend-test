@@ -60,10 +60,6 @@ export const withSearchPolling = (reconnectAttemptsNumber = 3, attemptDuration =
                 startSearch();
             }
 
-            componentWillUnmount() {
-                /*clearInterval(this.dataPolling);*/
-            }
-
             render() {
                 return <ChildComponent {...this.props}/>;
             }

@@ -1,0 +1,38 @@
+.checkbox {
+  display: flex;
+  user-select: none;
+  font-size: 13px;
+  line-height: 20px;
+
+  &__view {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary200;
+    border-radius: 3px;
+    position: relative;
+    margin-right: $spacer;
+    box-sizing: border-box;
+  }
+
+  input[type=checkbox] {
+    display: none;
+
+    &:checked {
+      & + .checkbox__view {
+        border-color: $primary500;
+        &:after {
+          background-image: url("../../assets/ckecked.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 5px;
+          left: 3px;
+          width: 12px;
+          height: 8px;
+        }
+      }
+    }
+  }
+}

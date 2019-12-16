@@ -12,13 +12,30 @@ const InitialState = {
 };
 
 export default function ClientReducer(state = InitialState, action) {
-
     switch (action.type) {
         case FETCH_SEARCH_ID_PENDING: {
            return {
                ...state,
-               searchId: action.payload.data.searchId
+               fetching: true,
+               fetched: false
            }
+        }
+
+        case FETCH_SEARCH_ID_FULFILLED: {
+            return {
+                ...state,
+                searchId: action.payload.data.searchId,
+                fetching: false,
+                fetched: true
+            }
+        }
+
+        case FETCH_SEARCH_ID_REJECTED: {
+            return {
+                ...state,
+                fetching: false,
+                fetched: true
+            }
         }
 
         default: {

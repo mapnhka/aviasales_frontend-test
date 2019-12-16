@@ -1,0 +1,13 @@
+.card {
+  background: $cardBg;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  &__header {
+    padding: $spacer * 2;
+  }
+
+  &__body {
+    padding: $spacer * 2;
+  }
+}
